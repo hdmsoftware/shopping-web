@@ -1,0 +1,53 @@
+<main id="main" role="main">
+				<div class="container">
+					<div class="box-hold top-hold">
+						<a href="#" class="btn"><span></span>ADD NEW PROJECT</a>
+						<div class="holder-select">
+							<span class="name-select">Show first</span>
+							<select>
+							  <option>Tranding </option>
+							  <option>Newest</option>
+							</select>
+							<i class="fa fa-angle-down" aria-hidden="true"></i>
+						</div>
+					</div>
+				<section class="section-item">
+					<h2>Trending</h2>
+					<div class="wrap-posts">
+						<div class="video-post holder" ng-repeat="project in $ctrl.currentProjects | limitTo: 8" ng-if="project.media.url.length > 0">
+							<div class="wrap-img">
+								<div class="box-img">
+										<video class="img-responsive" preload="auto" controls ng-src="{{ $ctrl.trustSrc(project.media.url) }}" ng-if="project.media.url">
+								Your browser does not support the video tag.
+							</video>					
+								</div>
+								<i>3:02</i>
+							</div>
+							<div class="box-content">
+								<h3><a href="#">{{project.name}}</a></h3>
+								<p>{{ project.description  | limitTo: 25}}</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="section-item">
+					<h2>NEWEST</h2>
+					<div class="wrap-posts">
+						<div class="video-post holder" ng-repeat="project in $ctrl.currentProjects | limitTo: 5" ng-if="project.media.url.length > 0">
+							<div class="wrap-img">
+								<div class="box-img">
+										<video class="img-responsive" preload="auto" controls ng-src="{{ $ctrl.trustSrc(project.media.url) }}" ng-if="project.media.url">
+								Your browser does not support the video tag.
+							</video>					
+								</div>
+								<i>3:02</i>
+							</div>
+							<div class="box-content">
+								<h3><a href="#">{{project.name}}</a></h3>
+								<p>{{ project.description  | limitTo: 25}}.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				</div>
+			</main>

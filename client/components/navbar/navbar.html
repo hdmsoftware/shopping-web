@@ -1,0 +1,37 @@
+<header id="header">
+        <div class="container">
+          <nav class="menu">
+            <a href="#" class="opener" ng-click="nav.handleSidebar('true')"><span></span></a>
+            <div class="drop" ng-show="nav.isSidebarVisible">
+              <div class="logo-nav">
+                <a href="#"><img src="assets/images/logo-nav.png" alt="SHOPTHATVID"></a>
+                <a href="#" class="close fa fa-arrow-left" ng-click="nav.handleSidebar('false')"></a>
+              </div>
+              <div class="box-author">
+                <div class="holder-box">
+                  <div class="box-img">
+                    <img src="assets/images/img-1.jpg" alt="Jeff">
+                  </div>
+                </div>
+                <i>Hi, Jeff</i>
+              </div>
+              <ul>
+                <li><a ui-sref="project"><i class="fa fa-folder"></i>Projects</a></li>
+                <li><a href="#"><i class="fa fa-plus"></i>CREATE</a></li>
+                <li><a href="#"><i class="fa fa-share-alt"></i>SHARE</a></li>
+                <li><a href="#"><i class="icon-door"></i>Logout</a></li>
+              </ul>
+            </div>
+          </nav>
+          <strong class="logo"><a href="#">Projects</a></strong>
+           <div class="search-holder">
+            <a href="#" class="search-open"><i class="fa fa-search"></i></a>
+            <form class="search-form" action="#">
+              <fieldset>
+                <input type="search" placeholder="Search" name="search">
+                <button type="submit"></button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </header>
